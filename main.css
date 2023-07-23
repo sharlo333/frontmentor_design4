@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Hanken+Grotesk:wght@500;700;800&family=Outfit:wght@400;700&family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Red Hat Display', sans-serif;
+}
+:root {
+  /* Primary */
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  /* Neutral */
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+}
+/* Start prodact style */
+.prodact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--Pale-blue);
+}
+.prodact .container {
+  background-color: var(--Very-pale-blue);
+  border-radius: 20px;
+  max-width: 390px;
+  text-align: center;
+}
+.prodact .container .image {
+  display: block;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  max-width: 100%;
+}
+.prodact .container .text-contant {
+  padding: 30px;
+}
+.prodact .container .text-contant h1 {
+  color: var(--Dark-blue);
+  font-size: 28px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+.prodact .container .text-contant .para-text {
+  color: var(--Desaturated-blue);
+  margin: 0 auto 20px;
+  font-size: 16px;
+  line-height: 1.4;
+  max-width: 100%;
+}
+.prodact .container .text-contant .btn {
+  border: none;
+  background-color: var(--Bright-blue);
+  color: var(--Very-pale-blue);
+  padding: 13px;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  box-shadow: -1px 10px 20px var(--Desaturated-blue);
+  transition: all .3s ease;
+}
+.prodact .container .text-contant .btn:hover {
+  opacity: 0.8;
+}
+.prodact .container .text-contant .btn-para {
+  color: var(--Desaturated-blue);
+  font-weight: 700;
+  transition: all .3s ease;
+}
+.prodact .container .text-contant .btn-para:hover {
+  color: var(--Dark-blue);
+}
+.prodact .container .text-contant .card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--Pale-blue);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.prodact .container .text-contant .card h3 {
+  color: var(--Dark-blue);
+  font-weight: 700;
+  font-size: 20px;
+}
+.prodact .container .text-contant .card a {
+  margin-right: 10px;
+  font-weight: 700;
+}
+.prodact .card .contant-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 55%;
+}
+.prodact .container .text-contant .card .text-card p {
+  color: var(--Desaturated-blue);
+}
+/* Start media prodact */
+@media (max-width: 767px) {
+  .prodact {
+    background-image: url(./images/pattern-background-mobile.svg);
+  }
+  .prodact .container .text-contant .para-text {
+    max-width: 80%;
+  }
+}
+/* End media prodact */
+/* End prodact style */
